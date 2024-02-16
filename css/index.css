@@ -3182,10 +3182,12 @@ h1.page-title + .tag-cloud-list {
 }
 #post-comment .comment-head .comment-switch {
   display: inline-block;
-  vertical-align: middle;
-}
-#post-comment .comment-head .comment-switch > span {
-  display: none;
+  float: right;
+  margin: 2px auto 0;
+  padding: 4px 16px;
+  width: max-content;
+  border-radius: 8px;
+  background: #f6f8fa;
 }
 #post-comment .comment-head .comment-switch .first-comment {
   color: #49b1f5;
