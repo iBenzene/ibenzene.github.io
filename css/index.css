@@ -6435,14 +6435,14 @@ blockquote.pullquote.right {
 }
 
 .author-content-item.like-technology {
-  background: url(/images/like-technology.jpg) no-repeat;
+  background: url(/images/menu/like-technology.jpg) no-repeat;
   background-size: cover;
   min-height: 230px;
   color: var(--anzhiyu-white);
 }
 
 .author-content-item.like-music {
-  background: url(/images/like-music.jpg) no-repeat top;
+  background: url(/images/menu/like-music.jpg) no-repeat top;
   background-size: cover;
   min-height: 400px;
   color: var(--anzhiyu-white);
@@ -6765,14 +6765,14 @@ blockquote.pullquote.right {
   filter: drop-shadow(0 -500px 0 var(--loadingbar-prospect-color));
   width: 500px;
   height: 62.5px;
-  background: url(images/yuanshen_loading-bar.png) no-repeat left
+  background: url(/images/menu/yuanshen_loading-bar.png) no-repeat left
     100%;
   background-size: 500px 62.5px;
   background-position-x: 0;
 }
 
 .author-content-item.game-yuanshen {
-  background: url(/images/yuanshen.jpg) no-repeat top;
+  background: url(/images/menu/yuanshen.jpg) no-repeat top;
   background-size: cover;
   min-height: 300px;
   overflow: hidden;
@@ -6874,11 +6874,28 @@ blockquote.pullquote.right {
   }
 }
 
-/* footer.css: 自定义页脚 */
+/* footer.css: 自定义页脚的样式 */
 
 #footer-wrap {
   /* 将字体调大 */
   font-size: large;
+}
+
+/* waline.css: 自定义 Waline 评论区的样式 */
+
+#wl-edit {
+    background: url("/images/wl-bg_miku.gif") 100% 100% no-repeat;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: right bottom !important; 
+}
+
+.wl-empty {
+    color: #9296a0 !important;
+}
+
+.wl-empty::after {
+    content: "你是第一个哦（〃•ω‹〃）";
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
