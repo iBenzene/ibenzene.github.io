@@ -6876,13 +6876,6 @@ blockquote.pullquote.right {
   }
 }
 
-/* footer.css: 自定义页脚的样式 */
-
-#footer-wrap {
-  /* 将字体调大 */
-  font-size: large;
-}
-
 /* waline.css: 自定义 Waline 评论区的样式 */
 
 #wl-edit {
