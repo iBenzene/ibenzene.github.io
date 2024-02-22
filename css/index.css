@@ -6876,6 +6876,12 @@ blockquote.pullquote.right {
   }
 }
 
+/* footer.css: 自定义页脚的样式 */
+
+/* 将自定义的页脚文本 .footer_custom_text 的字体调大 */
+.footer_custom_text {
+    font-size: 16px;
+}
 /* waline.css: 自定义 Waline 评论区的样式 */
 
 #wl-edit {
