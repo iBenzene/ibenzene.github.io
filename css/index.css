@@ -14,6 +14,7 @@
   white-space: nowrap;
 }
 .limit-more-line,
+.error403 #error-wrap .error-content .error-info .error_subtitle,
 .error404 #error-wrap .error-content .error-info .error_subtitle,
 .error500 #error-wrap .error-content .error-info .error_subtitle,
 .article-sort-item-title,
@@ -43,6 +44,7 @@
   -webkit-font-smoothing: antialiased;
 }
 .cardHover,
+.error403 #error-wrap .error-content,
 .error404 #error-wrap .error-content,
 .error500 #error-wrap .error-content,
 .layout > div:first-child:not(.recent-posts),
@@ -60,6 +62,7 @@
   transition: all 0.3s;
 }
 .cardHover:hover,
+.error403 #error-wrap .error-content:hover,
 .error404 #error-wrap .error-content:hover,
 .error500 #error-wrap .error-content:hover,
 .layout > div:first-child:not(.recent-posts):hover,
@@ -70,6 +73,7 @@
   box-shadow: var(--card-hover-box-shadow);
 }
 .imgHover,
+.error403 #error-wrap .error-content .error-img img,
 .error404 #error-wrap .error-content .error-img img,
 .error500 #error-wrap .error-content .error-img img,
 .article-sort-item-img :first-child,
@@ -85,6 +89,7 @@
   object-fit: cover;
 }
 .imgHover:hover,
+.error403 #error-wrap .error-content .error-img img:hover,
 .error404 #error-wrap .error-content .error-img img:hover,
 .error500 #error-wrap .error-content .error-img img:hover,
 .article-sort-item-img :first-child:hover,
@@ -1842,6 +1847,97 @@ figure.highlight pre .javascript .function {
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
     filter: alpha(opacity=60);
   }
+}
+.error403 #error-wrap {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  left: 0;
+  margin: 0 auto;
+  padding: 60px 20px 0;
+  max-width: 1000px;
+  -webkit-transform: translate(0, -50%);
+  -moz-transform: translate(0, -50%);
+  -o-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+}
+.error403 #error-wrap .error-content {
+  overflow: hidden;
+  margin: 0 20px;
+  height: 360px;
+}
+@media screen and (max-width: 768px) {
+  .error403 #error-wrap .error-content {
+    margin: 0;
+    height: 403px;
+  }
+}
+.error403 #error-wrap .error-content .error-img {
+  display: inline-block;
+  overflow: hidden;
+  width: 50%;
+  height: 100%;
+}
+@media screen and (max-width: 768px) {
+  .error403 #error-wrap .error-content .error-img {
+    width: 100%;
+    height: 45%;
+  }
+}
+.error403 #error-wrap .error-content .error-img img {
+  background-color: #49b1f5;
+}
+.error403 #error-wrap .error-content .error-info {
+  display: -webkit-inline-box;
+  display: -moz-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-box;
+  display: inline-flex;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -o-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -o-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -ms-flex-line-pack: center;
+  -webkit-align-content: center;
+  align-content: center;
+  width: 50%;
+  height: 100%;
+  vertical-align: top;
+  text-align: center;
+}
+@media screen and (max-width: 768px) {
+  .error403 #error-wrap .error-content .error-info {
+    width: 100%;
+    height: 55%;
+  }
+}
+.error403 #error-wrap .error-content .error-info .error_title {
+  margin-top: -0.6em;
+  font-size: 9em;
+}
+@media screen and (max-width: 768px) {
+  .error403 #error-wrap .error-content .error-info .error_title {
+    font-size: 8em;
+  }
+}
+.error403 #error-wrap .error-content .error-info .error_subtitle {
+  margin-top: -3em;
+  word-break: break-word;
+  font-size: 1.6em;
+  -webkit-line-clamp: 2;
+}
+.error403 + #rightside {
+  display: none;
 }
 .error404 #error-wrap {
   position: absolute;
