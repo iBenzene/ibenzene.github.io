@@ -7987,102 +7987,101 @@ div.timenode .meta:after {
 
 /* 
  * footer.css: 自定义「关于」页面的样式
- * 参考资料: 安知鱼主题
  */
 
 /*
- * 安知鱼主题设置的全局参数 
+ * 这一部分参考了安知鱼主题设置的全局参数
  */
 :root {
   /* 主题色参数 */
-  --anzhiyu-theme: #425aef;
-  --anzhiyu-theme-deep: #1856fb;
-  --anzhiyu-theme-top: var(--anzhiyu-theme);
-  --anzhiyu-theme-op: rgba(66, 89, 239, 0.137);
-  --anzhiyu-theme-op-deep: rgba(66, 89, 239, 0.867);
-  --anzhiyu-main: var(--anzhiyu-theme);
-  --anzhiyu-main-none: rgba(184, 184, 184, 0) !important;
-  --anzhiyu-main-op: var(--anzhiyu-theme-op);
-  --anzhiyu-main-op-deep: var(--anzhiyu-theme-op-deep) !important;
+  --ibenzene-theme: #425aef;
+  --ibenzene-theme-deep: #1856fb;
+  --ibenzene-theme-top: var(--ibenzene-theme);
+  --ibenzene-theme-op: rgba(66, 89, 239, 0.137);
+  --ibenzene-theme-op-deep: rgba(66, 89, 239, 0.867);
+  --ibenzene-main: var(--ibenzene-theme);
+  --ibenzene-main-none: rgba(184, 184, 184, 0) !important;
+  --ibenzene-main-op: var(--ibenzene-theme-op);
+  --ibenzene-main-op-deep: var(--ibenzene-theme-op-deep) !important;
 
   /* 颜色参数 */
-  --anzhiyu-blue: #5ca1ff;
-  --anzhiyu-blue-main: #425aef;
-  --anzhiyu-blue-tint: rgba(92, 161, 255, 0.1);
-  --anzhiyu-blue-hover: #5390e6;
-  --anzhiyu-red: #d8213c;
-  --anzhiyu-pink: #ff7c7c;
-  --anzhiyu-green: #57bd6a;
-  --anzhiyu-white: #fff;
-  --anzhiyu-white-op: rgba(255, 255, 255, 0.2);
-  --anzhiyu-wihite-font: #fff;
-  --anzhiyu-black: #000;
-  --anzhiyu-black-op: rgba(0, 0, 0, 0.2);
-  --anzhiyu-none: rgba(0, 0, 0, 0);
-  --anzhiyu-gray: #999;
-  --anzhiyu-gray-op: rgba(153, 153, 153, 0.169);
-  --anzhiyu-yellow: #ffc93e;
-  --anzhiyu-orange: #e38100;
-  --anzhiyu-deep-purple: #405589;
+  --ibenzene-blue: #5ca1ff;
+  --ibenzene-blue-main: #425aef;
+  --ibenzene-blue-tint: rgba(92, 161, 255, 0.1);
+  --ibenzene-blue-hover: #5390e6;
+  --ibenzene-red: #d8213c;
+  --ibenzene-pink: #ff7c7c;
+  --ibenzene-green: #57bd6a;
+  --ibenzene-white: #fff;
+  --ibenzene-white-op: rgba(255, 255, 255, 0.2);
+  --ibenzene-wihite-font: #fff;
+  --ibenzene-black: #000;
+  --ibenzene-black-op: rgba(0, 0, 0, 0.2);
+  --ibenzene-none: rgba(0, 0, 0, 0);
+  --ibenzene-gray: #999;
+  --ibenzene-gray-op: rgba(153, 153, 153, 0.169);
+  --ibenzene-yellow: #ffc93e;
+  --ibenzene-orange: #e38100;
+  --ibenzene-deep-purple: #405589;
 
   /* 阴影参数 */
-  --anzhiyu-shadow-theme: 0 8px 12px -3px var(--anzhiyu-theme-op);
-  --anzhiyu-shadow-main: 0 8px 12px -3px var(--anzhiyu-main-op);
-  --anzhiyu-shadow-blue: 0 8px 12px -3px rgba(40, 109, 234, 0.2);
-  --anzhiyu-shadow-white: 0 8px 12px -3px rgba(255, 255, 255, 0.2);
-  --anzhiyu-shadow-black: 0 0 12px 4px rgba(0, 0, 0, 0.05);
-  --anzhiyu-shadow-yellow: 0px 38px 77px -26px rgba(255, 201, 62, 0.12);
-  --anzhiyu-shadow-red: 0 8px 12px -3px rgba(238, 125, 121, 0.212);
-  --anzhiyu-shadow-green: 0 8px 12px -3px rgba(135, 238, 121, 0.212);
-  --anzhiyu-shadow-border: 0 8px 16px -4px rgba(44, 45, 48, 0.047);
-  --anzhiyu-shadow-blackdeep: 0 2px 16px -3px rgba(0, 0, 0, 0.15);
-  --anzhiyu-shadow-nav: 0 5px 12px -5px rgba(102, 68, 68, 0.05);
-  --anzhiyu-shadow-lightblack: 0 5px 12px -5px rgba(102, 68, 68, 0);
-  --anzhiyu-shadow-light2black: 0 5px 12px -5px rgba(102, 68, 68, 0);
+  --ibenzene-shadow-theme: 0 8px 12px -3px var(--ibenzene-theme-op);
+  --ibenzene-shadow-main: 0 8px 12px -3px var(--ibenzene-main-op);
+  --ibenzene-shadow-blue: 0 8px 12px -3px rgba(40, 109, 234, 0.2);
+  --ibenzene-shadow-white: 0 8px 12px -3px rgba(255, 255, 255, 0.2);
+  --ibenzene-shadow-black: 0 0 12px 4px rgba(0, 0, 0, 0.05);
+  --ibenzene-shadow-yellow: 0px 38px 77px -26px rgba(255, 201, 62, 0.12);
+  --ibenzene-shadow-red: 0 8px 12px -3px rgba(238, 125, 121, 0.212);
+  --ibenzene-shadow-green: 0 8px 12px -3px rgba(135, 238, 121, 0.212);
+  --ibenzene-shadow-border: 0 8px 16px -4px rgba(44, 45, 48, 0.047);
+  --ibenzene-shadow-blackdeep: 0 2px 16px -3px rgba(0, 0, 0, 0.15);
+  --ibenzene-shadow-nav: 0 5px 12px -5px rgba(102, 68, 68, 0.05);
+  --ibenzene-shadow-lightblack: 0 5px 12px -5px rgba(102, 68, 68, 0);
+  --ibenzene-shadow-light2black: 0 5px 12px -5px rgba(102, 68, 68, 0);
 
   /* 卡片参数 */
-  --anzhiyu-card-bg: #fff;
-  --anzhiyu-card-bg-none: rgba(255, 255, 255, 0);
-  --anzhiyu-card-btn-bg: #edf0f7;
-  --anzhiyu-card-border: #e3e8f7;
+  --ibenzene-card-bg: #fff;
+  --ibenzene-card-bg-none: rgba(255, 255, 255, 0);
+  --ibenzene-card-btn-bg: #edf0f7;
+  --ibenzene-card-border: #e3e8f7;
 
   /* 其他参数 */
-  --anzhiyu-fontcolor: #363636;
-  --anzhiyu-background: #f7f9fe;
-  --anzhiyu-reverse: #000;
-  --anzhiyu-maskbg: rgba(255, 255, 255, 0.6);
-  --anzhiyu-maskbgdeep: rgba(255, 255, 255, 0.85);
-  --anzhiyu-scrollbar: rgba(60, 60, 67, 0.4);
-  --anzhiyu-hovertext: var(--anzhiyu-theme);
-  --anzhiyu-ahoverbg: #f7f7fa;
-  --anzhiyu-lighttext: var(--anzhiyu-main);
-  --anzhiyu-snackbar-time: 2000ms;
-  --anzhiyu-bar-background: var(--anzhiyu-main);
-  --anzhiyu-logo-color: linear-gradient(215deg, #4584ff 0%, #cf0db9 100%);
-  --anzhiyu-code-stress: var(--anzhiyu-main);
+  --ibenzene-fontcolor: #363636;
+  --ibenzene-background: #f7f9fe;
+  --ibenzene-reverse: #000;
+  --ibenzene-maskbg: rgba(255, 255, 255, 0.6);
+  --ibenzene-maskbgdeep: rgba(255, 255, 255, 0.85);
+  --ibenzene-scrollbar: rgba(60, 60, 67, 0.4);
+  --ibenzene-hovertext: var(--ibenzene-theme);
+  --ibenzene-ahoverbg: #f7f7fa;
+  --ibenzene-lighttext: var(--ibenzene-main);
+  --ibenzene-snackbar-time: 2000ms;
+  --ibenzene-bar-background: var(--ibenzene-main);
+  --ibenzene-logo-color: linear-gradient(215deg, #4584ff 0%, #cf0db9 100%);
+  --ibenzene-code-stress: var(--ibenzene-main);
 
-  --anzhiyu-secondtext: rgba(60, 60, 67, 0.8);
-  --anzhiyu-secondbg: #f7f7f9;
+  --ibenzene-secondtext: rgba(60, 60, 67, 0.8);
+  --ibenzene-secondbg: #f7f7f9;
 
-  --anzhiyu-meta-theme-color: #f7f9fe;
-  --anzhiyu-meta-theme-post-color: #fff;
+  --ibenzene-meta-theme-color: #f7f9fe;
+  --ibenzene-meta-theme-post-color: #fff;
 
-  --anzhiyu-post-tabs-bg: #f2f5f8;
-  --anzhiyu-post-blockquote-bg: #fafcff;
+  --ibenzene-post-tabs-bg: #f2f5f8;
+  --ibenzene-post-blockquote-bg: #fafcff;
 
-  --anzhiyu-radius: 8px;
-  --anzhiyu-radius-full: 50px;
-  --anzhiyu-border-radius: 8px;
+  --ibenzene-radius: 8px;
+  --ibenzene-radius-full: 50px;
+  --ibenzene-border-radius: 8px;
 
   /* 卡片边框参数, 在我的博客中, 只有「关于」页面使用 */
-  --style-border: 1px solid var(--anzhiyu-card-border);
-  --style-border-hover: 1px solid var(--anzhiyu-main);
-  --style-border-dashed: 1px dashed var(--anzhiyu-theme-op);
-  --style-border-avatar: 5px solid var(--anzhiyu-white);
-  --style-border-always: 1px solid var(--anzhiyu-card-border);
+  --style-border: 1px solid var(--ibenzene-card-border);
+  --style-border-hover: 1px solid var(--ibenzene-main);
+  --style-border-dashed: 1px dashed var(--ibenzene-theme-op);
+  --style-border-avatar: 5px solid var(--ibenzene-white);
+  --style-border-always: 1px solid var(--ibenzene-card-border);
   --style-border-none: 1px solid transparent;
   --style-border-deep-ash: 1px solid #d0d7de;
-  --style-border-hover-always: 1px solid var(--anzhiyu-main);
+  --style-border-hover-always: 1px solid var(--ibenzene-main);
 }
 
 /*
@@ -8101,7 +8100,7 @@ div.timenode .meta:after {
 }
 
 #web_bg ~ .page:has(#about-page) {
-  background: var(--anzhiyu-background);
+  background: var(--ibenzene-background);
 }
 
 #about-page
@@ -8138,7 +8137,7 @@ div.timenode .meta:after {
   background: #6bdf8f;
   position: absolute;
   border-radius: 50%;
-  border: 6px solid var(--anzhiyu-background);
+  border: 6px solid var(--ibenzene-background);
   top: 50%;
   left: 50%;
   transform: translate(35px, 45px);
@@ -8155,9 +8154,9 @@ div.timenode .meta:after {
 .author-content-item {
   width: 49%;
   border-radius: 24px;
-  background: var(--anzhiyu-card-bg);
+  background: var(--ibenzene-card-bg);
   border: var(--style-border-always);
-  box-shadow: var(--anzhiyu-shadow-border);
+  box-shadow: var(--ibenzene-shadow-border);
   position: relative;
   padding: 1rem 2rem;
   overflow: hidden;
@@ -8269,7 +8268,7 @@ div.timenode .meta:after {
   width: 124px;
   border-radius: 20px;
   justify-content: center;
-  background: var(--anzhiyu-card-bg);
+  background: var(--ibenzene-card-bg);
   color: var(--font-color);
   display: flex;
   align-items: center;
@@ -8285,8 +8284,8 @@ div.timenode .meta:after {
 }
 
 .author-content-item .card-content .banner-button-group .banner-button:hover {
-  background: var(--anzhiyu-main);
-  color: var(--anzhiyu-white);
+  background: var(--ibenzene-main);
+  color: var(--ibenzene-white);
   border-radius: 20px !important;
 }
 
@@ -8351,8 +8350,8 @@ div.timenode .meta:after {
     .banner-button-group
     .banner-button:hover
     i {
-    background: var(--anzhiyu-background) !important;
-    color: var(--anzhiyu-theme);
+    background: var(--ibenzene-background) !important;
+    color: var(--ibenzene-theme);
   }
   .author-content-item .card-content .banner-button-group .banner-button-text {
     display: none;
@@ -8373,7 +8372,7 @@ div.timenode .meta:after {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  color: var(--anzhiyu-white);
+  color: var(--ibenzene-white);
   background: linear-gradient(120deg, #5b27ff 0, #00d4ff 100%);
   background-size: 200%;
   animation: gradient 15s ease infinite;
@@ -8422,7 +8421,7 @@ div.timenode .meta:after {
 
 .author-content-item.comic-content {
   width: 39%;
-  background: url(https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/violet.jpg)
+  background: url(/images/menu/like-comic.jpg)
     no-repeat top;
   background-size: cover;
   min-height: 300px;
@@ -8444,14 +8443,14 @@ div.timenode .meta:after {
   background: url(/images/menu/like-technology.jpg) no-repeat;
   background-size: cover;
   min-height: 230px;
-  color: var(--anzhiyu-white);
+  color: var(--ibenzene-white);
 }
 
 .author-content-item.like-music {
   background: url(/images/menu/like-music.jpg) no-repeat top;
   background-size: cover;
   min-height: 400px;
-  color: var(--anzhiyu-white);
+  color: var(--ibenzene-white);
   overflow: hidden;
 }
 
@@ -8472,9 +8471,9 @@ div.timenode .meta:after {
 .hello-about {
   margin: 20px auto;
   border-radius: 24px;
-  background: var(--anzhiyu-card-bg);
+  background: var(--ibenzene-card-bg);
   border: var(--style-border-always);
-  box-shadow: var(--anzhiyu-shadow-border);
+  box-shadow: var(--ibenzene-shadow-border);
   position: relative;
   overflow: hidden;
   user-select: none;
@@ -8609,7 +8608,7 @@ div.timenode .meta:after {
   color: #fff;
   font-size: 66px;
   font-weight: 700;
-  box-shadow: var(--anzhiyu-shadow-blackdeep);
+  box-shadow: var(--ibenzene-shadow-blackdeep);
   width: 120px;
   height: 120px;
   border-radius: 30px;
@@ -8643,11 +8642,11 @@ div.timenode .meta:after {
   align-items: center;
   margin-right: 10px;
   margin-top: 10px;
-  background: var(--anzhiyu-background);
+  background: var(--ibenzene-background);
   border-radius: 40px;
   padding: 4px 12px 4px 8px;
   border: var(--style-border);
-  box-shadow: var(--anzhiyu-shadow-border);
+  box-shadow: var(--ibenzene-shadow-border);
 }
 
 .author-content-item.skills .skill-icon {
@@ -8708,7 +8707,7 @@ div.timenode .meta:after {
 }
 
 .author-content-item.careers .careers-item .name {
-  color: var(--anzhiyu-secondtext);
+  color: var(--ibenzene-secondtext);
 }
 
 .author-content-item.careers .careers-item {
@@ -8724,7 +8723,7 @@ div.timenode .meta:after {
 }
 
 .author-content-item.careers .careers-item .name {
-  color: var(--anzhiyu-secondtext);
+  color: var(--ibenzene-secondtext);
 }
 
 .author-content-item.careers img {
@@ -8782,7 +8781,7 @@ div.timenode .meta:after {
   background-size: cover;
   min-height: 300px;
   overflow: hidden;
-  color: var(--anzhiyu-white);
+  color: var(--ibenzene-white);
   width: 59%;
 }
 
