@@ -6161,7 +6161,12 @@ template {
 [hidden] {
   display: none
 }
-/* tag_plugins.css:「店长」@Akilar 的标签外挂样式 */
+/* 
+ * tag_plugins.css:「店长」@Akilar 的标签外挂样式 
+ * 
+ * Q: 为什么要引入？
+ * A: 因为「关于」页面会用到（代码是抄 @安知鱼 的
+ */
  
 [data-theme="dark"] div.btns {
   filter: brightness(0.7);
@@ -7990,101 +7995,6 @@ div.timenode .meta:after {
  */
 
 /*
- * 这一部分参考了安知鱼主题设置的全局参数
- */
-:root {
-  /* 主题色参数 */
-  --ibenzene-theme: #425aef;
-  --ibenzene-theme-deep: #1856fb;
-  --ibenzene-theme-top: var(--ibenzene-theme);
-  --ibenzene-theme-op: rgba(66, 89, 239, 0.137);
-  --ibenzene-theme-op-deep: rgba(66, 89, 239, 0.867);
-  --ibenzene-main: var(--ibenzene-theme);
-  --ibenzene-main-none: rgba(184, 184, 184, 0) !important;
-  --ibenzene-main-op: var(--ibenzene-theme-op);
-  --ibenzene-main-op-deep: var(--ibenzene-theme-op-deep) !important;
-
-  /* 颜色参数 */
-  --ibenzene-blue: #5ca1ff;
-  --ibenzene-blue-main: #425aef;
-  --ibenzene-blue-tint: rgba(92, 161, 255, 0.1);
-  --ibenzene-blue-hover: #5390e6;
-  --ibenzene-red: #d8213c;
-  --ibenzene-pink: #ff7c7c;
-  --ibenzene-green: #57bd6a;
-  --ibenzene-white: #fff;
-  --ibenzene-white-op: rgba(255, 255, 255, 0.2);
-  --ibenzene-wihite-font: #fff;
-  --ibenzene-black: #000;
-  --ibenzene-black-op: rgba(0, 0, 0, 0.2);
-  --ibenzene-none: rgba(0, 0, 0, 0);
-  --ibenzene-gray: #999;
-  --ibenzene-gray-op: rgba(153, 153, 153, 0.169);
-  --ibenzene-yellow: #ffc93e;
-  --ibenzene-orange: #e38100;
-  --ibenzene-deep-purple: #405589;
-
-  /* 阴影参数 */
-  --ibenzene-shadow-theme: 0 8px 12px -3px var(--ibenzene-theme-op);
-  --ibenzene-shadow-main: 0 8px 12px -3px var(--ibenzene-main-op);
-  --ibenzene-shadow-blue: 0 8px 12px -3px rgba(40, 109, 234, 0.2);
-  --ibenzene-shadow-white: 0 8px 12px -3px rgba(255, 255, 255, 0.2);
-  --ibenzene-shadow-black: 0 0 12px 4px rgba(0, 0, 0, 0.05);
-  --ibenzene-shadow-yellow: 0px 38px 77px -26px rgba(255, 201, 62, 0.12);
-  --ibenzene-shadow-red: 0 8px 12px -3px rgba(238, 125, 121, 0.212);
-  --ibenzene-shadow-green: 0 8px 12px -3px rgba(135, 238, 121, 0.212);
-  --ibenzene-shadow-border: 0 8px 16px -4px rgba(44, 45, 48, 0.047);
-  --ibenzene-shadow-blackdeep: 0 2px 16px -3px rgba(0, 0, 0, 0.15);
-  --ibenzene-shadow-nav: 0 5px 12px -5px rgba(102, 68, 68, 0.05);
-  --ibenzene-shadow-lightblack: 0 5px 12px -5px rgba(102, 68, 68, 0);
-  --ibenzene-shadow-light2black: 0 5px 12px -5px rgba(102, 68, 68, 0);
-
-  /* 卡片参数 */
-  --ibenzene-card-bg: #fff;
-  --ibenzene-card-bg-none: rgba(255, 255, 255, 0);
-  --ibenzene-card-btn-bg: #edf0f7;
-  --ibenzene-card-border: #e3e8f7;
-
-  /* 其他参数 */
-  --ibenzene-fontcolor: #363636;
-  --ibenzene-background: #f7f9fe;
-  --ibenzene-reverse: #000;
-  --ibenzene-maskbg: rgba(255, 255, 255, 0.6);
-  --ibenzene-maskbgdeep: rgba(255, 255, 255, 0.85);
-  --ibenzene-scrollbar: rgba(60, 60, 67, 0.4);
-  --ibenzene-hovertext: var(--ibenzene-theme);
-  --ibenzene-ahoverbg: #f7f7fa;
-  --ibenzene-lighttext: var(--ibenzene-main);
-  --ibenzene-snackbar-time: 2000ms;
-  --ibenzene-bar-background: var(--ibenzene-main);
-  --ibenzene-logo-color: linear-gradient(215deg, #4584ff 0%, #cf0db9 100%);
-  --ibenzene-code-stress: var(--ibenzene-main);
-
-  --ibenzene-secondtext: rgba(60, 60, 67, 0.8);
-  --ibenzene-secondbg: #f7f7f9;
-
-  --ibenzene-meta-theme-color: #f7f9fe;
-  --ibenzene-meta-theme-post-color: #fff;
-
-  --ibenzene-post-tabs-bg: #f2f5f8;
-  --ibenzene-post-blockquote-bg: #fafcff;
-
-  --ibenzene-radius: 8px;
-  --ibenzene-radius-full: 50px;
-  --ibenzene-border-radius: 8px;
-
-  /* 卡片边框参数, 在我的博客中, 只有「关于」页面使用 */
-  --style-border: 1px solid var(--ibenzene-card-border);
-  --style-border-hover: 1px solid var(--ibenzene-main);
-  --style-border-dashed: 1px dashed var(--ibenzene-theme-op);
-  --style-border-avatar: 5px solid var(--ibenzene-white);
-  --style-border-always: 1px solid var(--ibenzene-card-border);
-  --style-border-none: 1px solid transparent;
-  --style-border-deep-ash: 1px solid #d0d7de;
-  --style-border-hover-always: 1px solid var(--ibenzene-main);
-}
-
-/*
  * 「关于」页面的基本样式 
  */
 
@@ -8421,16 +8331,15 @@ div.timenode .meta:after {
 
 .author-content-item.comic-content {
   width: 39%;
-  background: url(/images/menu/like-comic.jpg)
-    no-repeat top;
+  background: url(/images/menu/like-comic.jpg) no-repeat top;
   background-size: cover;
   min-height: 300px;
   overflow: hidden;
-  color: violet;
+  color: var(--ibenzene-white);
 }
 
 .author-content-item.comic-content::after {
-  box-shadow: 0 -48px 203px 11px #fbe9b8 inset;
+  box-shadow: 0 -48px 203px 11px #5f5953 inset;
   position: absolute;
   content: "";
   width: 100%;
@@ -8770,8 +8679,7 @@ div.timenode .meta:after {
   filter: drop-shadow(0 -500px 0 var(--loadingbar-prospect-color));
   width: 500px;
   height: 62.5px;
-  background: url(/images/menu/yuanshen_loading-bar.png) no-repeat left
-    100%;
+  background: url(/images/menu/yuanshen_loading-bar.png) no-repeat left 100%;
   background-size: 500px 62.5px;
   background-position-x: 0;
 }
@@ -8879,13 +8787,147 @@ div.timenode .meta:after {
   }
 }
 
-/* footer.css: 自定义页脚的样式 */
+/* 
+ * category.css: 自定义「分类」页面的样式
+ */
+
+.category-lists ul {
+  padding: 0;
+}
+
+.category-lists ul li:before {
+  position: unset;
+  width: auto;
+  height: auto;
+  border: 0;
+  border-radius: 0;
+  background: 0;
+  color: var(--ibenzene-fontcolor) !important;
+  cursor: pointer;
+  content: "#" !important;
+  font-family: "iconfont" !important;
+  opacity: 0.4;
+  padding-top: 2px;
+  padding-right: 2px;
+}
+
+.category-lists ul li {
+  display: flex;
+  width: fit-content;
+  font-size: 1.1em !important;
+  padding: 0.2em 0.5em;
+  background: var(--ibenzene-card-bg);
+  margin: 0.5em 0.5em;
+  border-radius: 12px;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden; /* For Safari and older Chrome */
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d; /* For Safari and older Chrome */
+  border: var(--style-border-always);
+  box-shadow: var(--ibenzene-shadow-border);
+  align-items: center;
+}
+
+.category-lists .category-list a {
+  color: var(--ibenzene-fontcolor) !important;
+}
+
+.category-lists .category-list a:hover {
+  color: var(--ibenzene-blue) !important;
+}
+
+.category-lists .category-list {
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: row;
+  margin: 5em 0 3em;
+}
+
+.category-lists .category-list .category-list-count {
+  background: var(--ibenzene-secondbg);
+  padding: 4px 4px;
+  border-radius: 6px;
+  color: var(--ibenzene-secondtext);
+  line-height: 1;
+  text-align: center;
+  min-width: 35px;
+  display: inline-block;
+  font-size: 1rem;
+  box-shadow: var(--ibenzene-shadow-border);
+}
+
+.category-lists .category-list .category-list-count:before,
+.category-lists .category-list .category-list-count:after {
+  content: "";
+}
+
+/* 
+ * footer.css: 自定义页脚的样式 
+ */
 
 /* 将自定义的页脚文本 .footer_custom_text 的字体调大 */
 .footer_custom_text {
     font-size: 16px;
 }
-/* waline.css: 自定义 Waline 评论区的样式 */
+
+/*
+ * global.css: 自定义样式的全局参数
+ */
+
+:root {
+  /* 主题色参数 */
+  --ibenzene-theme: var(--ibenzene-blue); /* 同 themes/butterfly/source/css/var.styl 中的 $theme-color */
+  --ibenzene-theme-deep: #477aa7;
+  --ibenzene-main: var(--ibenzene-theme);
+
+  /* 颜色参数 */
+  --ibenzene-white: #fff;
+  --ibenzene-blue: #49b1f5; /* 同 themes/butterfly/source/css/var.styl 中的 $bright-blue */
+
+  /* 阴影参数 */
+  --ibenzene-shadow-border: 0 8px 16px -4px rgba(44, 45, 48, 0.047);
+  --ibenzene-shadow-blackdeep: 0 2px 16px -3px rgba(0, 0, 0, 0.15);
+
+  /* 卡片参数 */
+  --ibenzene-card-bg: #fff;
+  --ibenzene-card-border: #e3e8f7;
+
+  /* 其他参数 */
+  --ibenzene-fontcolor: #363636;
+  --ibenzene-background: #f7f9fe;
+
+  --ibenzene-secondbg: #f7f7f9;
+  --ibenzene-secondtext: rgba(60, 60, 67, 0.8);
+
+  /* 卡片边框参数, 在我的博客中, 供「关于」、「分类」页面使用 */
+  --style-border: 1px solid var(--ibenzene-card-border);
+  --style-border-always: 1px solid var(--ibenzene-card-border);
+}
+
+/* 
+ * homepage.css: 自定义主页的样式
+ */
+
+/* PC 端 */
+@media screen and (min-width: 1000px) {
+    /* PC 端主页的壁纸 */
+    .full_page {
+        background-image: url('/images/homepage.jpg');
+    }
+}
+
+/* 移动端 */
+@media screen and (max-width: 1000px) {
+    /* 移动端主页的壁纸 */
+    .full_page {
+        background-image: url('/images/homepage_mobile.jpg');
+    }
+}
+/* 
+ * waline.css: 自定义 Waline 评论区的样式 
+ */
 
 #wl-edit {
     background: url("/images/wl-bg_miku.gif") 100% 100% no-repeat;
