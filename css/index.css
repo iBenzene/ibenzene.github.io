@@ -6165,7 +6165,7 @@ template {
  * tag_plugins.css:「店长」@Akilar 的标签外挂样式 
  * 
  * Q: 为什么要引入？
- * A: 因为「关于」页面会用到（代码是抄 @安知鱼 的
+ * A: 因为「本人」页面会用到（代码是抄 @安知鱼 的
  */
  
 [data-theme="dark"] div.btns {
@@ -7991,11 +7991,11 @@ div.timenode .meta:after {
 }
 
 /* 
- * footer.css: 自定义「关于」页面的样式
+ * footer.css: 自定义「本人」页面的样式
  */
 
 /*
- * 「关于」页面的基本样式 
+ * 「本人」页面的基本样式 
  */
 
 #page:has(#about-page) {
@@ -8331,7 +8331,7 @@ div.timenode .meta:after {
 
 .author-content-item.comic-content {
   width: 39%;
-  background: url(/images/menu/like-comic.jpg) no-repeat top;
+  background: url(/images/menu/about/like-comic.jpg) no-repeat top;
   background-size: cover;
   min-height: 300px;
   overflow: hidden;
@@ -8339,7 +8339,7 @@ div.timenode .meta:after {
 }
 
 .author-content-item.comic-content::after {
-  box-shadow: 0 -48px 203px 11px #5f5953 inset;
+  box-shadow: 0 -48px 203px 11px #5a544f inset; /* 这个阴影和褐色西服颜色较为接近 */
   position: absolute;
   content: "";
   width: 100%;
@@ -8349,14 +8349,14 @@ div.timenode .meta:after {
 }
 
 .author-content-item.like-technology {
-  background: url(/images/menu/like-technology.jpg) no-repeat;
+  background: url(/images/menu/about/like-technology.jpg) no-repeat;
   background-size: cover;
   min-height: 230px;
   color: var(--ibenzene-white);
 }
 
 .author-content-item.like-music {
-  background: url(/images/menu/like-music.jpg) no-repeat top;
+  background: url(/images/menu/about/like-music.jpg) no-repeat top;
   background-size: cover;
   min-height: 400px;
   color: var(--ibenzene-white);
@@ -8364,7 +8364,7 @@ div.timenode .meta:after {
 }
 
 .author-content-item.like-music::after {
-  box-shadow: 0 -69px 203px 11px #453e38 inset;
+  box-shadow: 0 -69px 203px 11px #453e38 inset; /* 这个阴影偏棕, 可以抵消初音的亮度和饱和度 */
   position: absolute;
   content: "";
   width: 100%;
@@ -8386,6 +8386,7 @@ div.timenode .meta:after {
   position: relative;
   overflow: hidden;
   user-select: none;
+  -webkit-user-select: none;
 }
 
 .hello-about h1 {
@@ -8461,6 +8462,7 @@ div.timenode .meta:after {
   border-radius: 50%;
   will-change: transform;
   user-select: none;
+  -webkit-user-select: none;
   pointer-events: none;
   z-index: 3;
 }
@@ -8652,6 +8654,25 @@ div.timenode .meta:after {
   --loadingbar-prospect-color: #ece5d8;
 }
 
+.author-content-item.game-yuanshen {
+  background: url(/images/menu/about/yuanshen.jpg) no-repeat top;
+  background-size: cover;
+  min-height: 300px;
+  overflow: hidden;
+  color: var(--ibenzene-white);
+  width: 59%;
+}
+
+.author-content-item.game-yuanshen::after {
+  box-shadow: 0 -69px 203px 11px #575d8b inset; /* 这个阴影和刻、甘的色调接近 */
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
 .loading-bar {
   position: absolute;
   top: 50%;
@@ -8661,72 +8682,35 @@ div.timenode .meta:after {
   transform: translate(-25%, -50%) scale(0.5);
   transition: all 0.5s;
   user-select: none;
+  -webkit-user-select: none;
   overflow: hidden;
-}
 
-.loading-bar img {
-  position: absolute;
-  top: 500px;
-  left: 0;
-  filter: drop-shadow(0 -500px 0 var(--loadingbar-background-color));
-}
-
-.loading-bar::after {
-  content: "";
-  position: absolute;
-  top: 500px;
-  left: 0;
-  filter: drop-shadow(0 -500px 0 var(--loadingbar-prospect-color));
-  width: 500px;
-  height: 62.5px;
-  background: url(/images/menu/yuanshen_loading-bar.png) no-repeat left 100%;
+  /* 进度条 */
+  background: url(/images/menu/about/yuanshen_loading-bar.png) no-repeat left
+    100%;
   background-size: 500px 62.5px;
   background-position-x: 0;
 }
 
-.author-content-item.game-yuanshen {
-  background: url(/images/menu/yuanshen.jpg) no-repeat top;
-  background-size: cover;
-  min-height: 300px;
-  overflow: hidden;
-  color: var(--ibenzene-white);
-  width: 59%;
-}
-
-.author-content-item.game-yuanshen::after {
-  box-shadow: 0 -69px 203px 11px #575d8b inset;
-  position: absolute;
-  content: "";
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-}
-
-.author-content-item.game-yuanshen:hover .loading-bar::after {
+.author-content-item.game-yuanshen:hover .loading-bar {
   animation: loading-bar 3.5s cubic-bezier(0.28, 0.11, 0.32, 1) infinite
     forwards;
 }
 
 @media screen and (max-width: 719px) {
-  .loading-bar .loading-bar {
+  .loading-bar {
     display: none;
   }
 }
 
 @media screen and (max-width: 719px) and (orientation: landscape) {
-  .loading-bar .loading-bar {
+  .loading-bar {
     display: block !important;
     transform: translate(-50%, -50%) scale(0.7) !important;
   }
 }
 
-@supports not (filter: drop-shadow(0 0 0 #fff)) {
-  .loading-bar:before {
-    content: "Your browser does not support the animation";
-  }
-}
-
+/* 原神, 启动 🚀 */
 @keyframes loading-bar {
   0% {
     width: 0;
@@ -8864,6 +8848,135 @@ div.timenode .meta:after {
 }
 
 /* 
+ * equipment.css: 自定义「装备」页面的样式
+ */
+
+.equipment-item-content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0 -8px;
+}
+
+.equipment-item-content-item {
+  width: calc(33% - 12px);
+  border-radius: 12px;
+  border: var(--style-border-always);
+  overflow: hidden;
+  margin: 8px 6px;
+  background: var(--ibenzene-card-bg);
+  box-shadow: var(--ibenzene-shadow-border);
+  min-height: 400px;
+  position: relative;
+}
+
+/* 平板设备 */
+@media screen and (max-width: 1200px) {
+  .equipment-item-content-item {
+    width: calc(50% - 12px);
+  }
+}
+
+/* 手机设备 */
+@media screen and (max-width: 768px) {
+  .equipment-item-content-item {
+    width: 100%;
+  }
+}
+
+.equipment-item-content-item-info {
+  padding: 8px 16px 16px 16px;
+  margin-top: 12px;
+}
+
+.equipment-item-content-item-name {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1;
+  margin-bottom: 8px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: fit-content;
+}
+
+.equipment-item-content-item-specification {
+  font-size: 12px;
+  color: var(--ibenzene-secondtext);
+  line-height: 1;
+  margin-bottom: 12px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.equipment-item-content-item-description {
+  line-height: 20px;
+  color: var(--ibenzene-secondtext);
+  height: 60px;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  font-size: 14px;
+}
+
+a.equipment-item-content-item-link {
+  font-size: 12px;
+  color: var(--ibenzene-fontcolor); /* 字体颜色 */
+  background: var(--ibenzene-gray-op);
+  padding: 4px 8px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+a.equipment-item-content-item-link:hover {
+  background: var(--ibenzene-main);
+  color: var(--ibenzene-white);
+}
+
+h2.equipment-item-title {
+  line-height: 1;
+}
+
+.equipment-item-description {
+  line-height: 1;
+  margin: 4px 0 8px 0;
+  color: var(--ibenzene-secondtext);
+}
+
+.equipment-item-content-item-cover {
+  width: 100%;
+  height: 200px;
+  background: var(--ibenzene-secondbg);
+  display: flex;
+  justify-content: center;
+}
+
+img.equipment-item-content-item-image {
+  object-fit: cover;
+  height: 100%;
+}
+
+div#equipment {
+  margin-top: 26px;
+}
+
+.equipment-item-content-item-toolbar {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 12px;
+  left: 0;
+  width: 100%;
+  padding: 0 16px;
+}
+
+a.bber-reply {
+  cursor: pointer;
+}
+
+/* 
  * footer.css: 自定义页脚的样式 
  */
 
@@ -8885,6 +8998,7 @@ div.timenode .meta:after {
   /* 颜色参数 */
   --ibenzene-white: #fff;
   --ibenzene-blue: #49b1f5; /* 同 themes/butterfly/source/css/var.styl 中的 $bright-blue */
+  --ibenzene-gray-op: rgba(153,153,153,0.169);
 
   /* 阴影参数 */
   --ibenzene-shadow-border: 0 8px 16px -4px rgba(44, 45, 48, 0.047);
@@ -8901,7 +9015,7 @@ div.timenode .meta:after {
   --ibenzene-secondbg: #f7f7f9;
   --ibenzene-secondtext: rgba(60, 60, 67, 0.8);
 
-  /* 卡片边框参数, 在我的博客中, 供「关于」、「分类」页面使用 */
+  /* 卡片边框参数 */
   --style-border: 1px solid var(--ibenzene-card-border);
   --style-border-always: 1px solid var(--ibenzene-card-border);
 }
@@ -8910,7 +9024,7 @@ div.timenode .meta:after {
  * homepage.css: 自定义主页的样式
  */
 
-/* PC 端 */
+/* PC 端: 屏幕宽度 >= 1000px */
 @media screen and (min-width: 1000px) {
     /* PC 端主页的壁纸 */
     .full_page {
@@ -8918,7 +9032,7 @@ div.timenode .meta:after {
     }
 }
 
-/* 移动端 */
+/* 移动端: 屏幕宽度 <= 1000px */
 @media screen and (max-width: 1000px) {
     /* 移动端主页的壁纸 */
     .full_page {
