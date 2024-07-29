@@ -8982,17 +8982,59 @@ a.bber-reply {
 
 /* 将自定义的页脚文本 .footer_custom_text 的字体调大 */
 .footer_custom_text {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
 }
 
-/* 公安备案徽标的样式 */
+/* 心跳动画 */
+.with-love {
+  display: inline-block;
+  margin: 0 8px;
+  animation: icon-animate 1.33s ease-in-out infinite;
+}
+@keyframes icon-animate {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  10%,
+  30% {
+    transform: scale(0.9);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: scale(1.1);
+  }
+  50%,
+  70% {
+    transform: scale(1.1);
+  }
+}
+
+/* 页脚太长, 得针对移动端做相应的适配 */
+@media screen and (max-width: 768px) {
+  #footer_copyright {
+    display: none;
+  }
+
+  .beian_info {
+    flex-direction: column;
+  }
+
+  #separator_of_beian_info {
+    display: none;
+  }
+}
+
+/*（已弃用）公安备案徽标的样式 */
 .mps-beian-icon {
-    display: inline;
-    width: 21px;
-    margin-right: 5px;
+  display: inline;
+  width: 21px;
+  margin-right: 5px;
 }
 
 /*
@@ -9034,16 +9076,16 @@ a.bber-reply {
  * homepage.css: 自定义主页的样式
  */
 
-/* PC 端: 屏幕宽度 >= 1000px */
-@media screen and (min-width: 1000px) {
+/* PC 端: 屏幕宽度 >= 992px */
+@media screen and (min-width: 992px) {
     /* PC 端主页的壁纸 */
     .full_page {
         background-image: url('/images/homepage.jpg');
     }
 }
 
-/* 移动端: 屏幕宽度 <= 1000px */
-@media screen and (max-width: 1000px) {
+/* 移动端: 屏幕宽度 <= 9920px */
+@media screen and (max-width: 992px) {
     /* 移动端主页的壁纸 */
     .full_page {
         background-image: url('/images/homepage_mobile.jpg');
